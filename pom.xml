@@ -11,6 +11,8 @@
 
     <!--模块-->
     <modules>
+        <module>eureka-server</module>
+        <module>eureka-client</module>
     </modules>
 
     <!--spring boot-->
@@ -51,6 +53,7 @@
     </dependencies>
 
     <dependencyManagement>
+        <!--Spring Cloud 的版本-->
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -58,6 +61,16 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.timo.eureka.server</groupId>
+                <artifactId>eureka-server</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.timo.eureka.client</groupId>
+                <artifactId>eureka-client</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -1,0 +1,15 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #因为自己本身就是注册中心 所以不向自己注册
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    enable-replicated-request-compression: false
+
