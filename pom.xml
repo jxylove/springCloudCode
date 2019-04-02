@@ -13,6 +13,12 @@
     <modules>
         <module>eureka-server</module>
         <module>eureka-client</module>
+        <module>feign-hello-consumer</module>
+        <module>feign-hello-provider</module>
+        <!--ribbon start-->
+        <module>ribbon-eureka-client-a</module>
+        <module>ribbon-loadbalancer-a</module>
+        <!--ribbon end-->
     </modules>
 
     <!--spring boot-->
@@ -70,6 +76,26 @@
             <dependency>
                 <groupId>com.timo.eureka.client</groupId>
                 <artifactId>eureka-client</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.timo.eureka.feign</groupId>
+                <artifactId>feign-hello-consumer</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.timo.eureka.feign</groupId>
+                <artifactId>feign-hello-provider</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.timo.eureka.rb</groupId>
+                <artifactId>ribbon-eureka-client-a</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.timo.eureka.rbl</groupId>
+                <artifactId>ribbon-loadbalancer-a</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
