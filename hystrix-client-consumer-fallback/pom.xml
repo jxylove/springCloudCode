@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <groupId>com.timo.eureka.hc</groupId>
-    <artifactId>hystrix-client-consumer</artifactId>
+    <groupId>com.timo.eureka.hcf</groupId>
+    <artifactId>hystrix-client-consumer-fallback</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hystrix-client-consumer</name>
+    <name>hystrix-client-consumer-fallback</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

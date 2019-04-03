@@ -1,12 +1,22 @@
+########################
+# 服务器相关配置
+########################
 server:
   port: 8400
+########################
+# eureka相关配置
+########################
 eureka:
   client:
     service-url:
+     #eureka 注册中心的地址
      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-
+########################
+# spring 相关配置
+########################
 spring:
   application:
+    #应用名称
     name: RIBBON-EUREKA-CLIENT-A

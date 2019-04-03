@@ -2,18 +2,21 @@
 # 服务器相关配置
 ########################
 server:
-  port: 8330
+  port: 8600
 ########################
 # eureka相关配置
 ########################
 eureka:
   client:
     service-url:
-      #eureka 注册中心的地址
+     #eureka 注册中心的地址
      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
 ########################
 # spring 相关配置
 ########################
 spring:
   application:
-    name: FEIGN-HELLO-PROVIDER
+    name: HYSTRIX-PROVIDER
+
