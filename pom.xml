@@ -33,7 +33,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <fastjson.version>1.2.47</fastjson.version>
-        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <!--<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>-->
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
     <!--依赖包-->
     <dependencies>

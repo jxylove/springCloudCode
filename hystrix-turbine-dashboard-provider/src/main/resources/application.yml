@@ -2,7 +2,7 @@
 # 服务器相关配置
 ########################
 server:
-  port: 8540
+  port: 8541
 ########################
 # eureka相关配置
 ########################
@@ -18,7 +18,7 @@ eureka:
 ########################
 spring:
   application:
-    name: HYSTRIX-DASHBOARD-PROVIDER
+    name: HYSTRIX-TURBINE-DASHBOARD-PROVIDER
 
 ########################
 # hystrix 相关配置

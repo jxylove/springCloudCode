@@ -1,0 +1,36 @@
+########################
+# 服务器相关配置
+########################
+server:
+  port: 8700
+########################
+# eureka相关配置
+########################
+eureka:
+  client:
+    service-url:
+      #eureka 注册中心的地址
+      defaultZone: http://localhost:8761/eureka/
+########################
+# Spring 相关配置
+########################
+spring:
+  application:
+    name: HYSTRIX-TURBINE-DASHBOARD
+
+
+########################
+# hystrix 相关配置
+########################
+management:
+  endpoint:
+    env:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+turbine:
+  #需要再仪表盘关注的服务
+  app-config: HYSTRIX-TURBINE-DASHBOARD-PROVIDER,HYSTRIX-TURBINE-DASHBOARD-CONSUMER
+  cluster-name-expression: "'default'"

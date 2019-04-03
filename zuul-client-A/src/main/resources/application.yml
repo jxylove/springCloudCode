@@ -1,0 +1,21 @@
+########################
+# 服务器相关配置
+########################
+server:
+  port: 8900
+########################
+# eureka相关配置
+########################
+eureka:
+  client:
+    service-url:
+      #eureka 注册中心的地址
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
+  instance:
+    prefer-ip-address: true
+########################
+# spring 相关配置
+########################
+spring:
+  application:
+    name: ZUUL-CLIENT-A
