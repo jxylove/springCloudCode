@@ -2,13 +2,14 @@
 # 服务器相关配置
 ########################
 server:
-  port: 8501
+  port: 8550
 ########################
 # eureka相关配置
 ########################
 eureka:
   client:
     service-url:
+      #eureka 注册中心的地址
      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
@@ -17,7 +18,9 @@ eureka:
 ########################
 spring:
   application:
-    name: HYSTRIX-DASHBOARD
+    #应用名称
+    name: HYSTRIX-DASHBOARD-CONSUMER
+
 ########################
 # hystrix 相关配置
 ########################
@@ -30,3 +33,9 @@ management:
   endpoint:
     env:
       enabled: false
+########################
+# feign 相关配置
+########################
+feign:
+  hystrix:
+    enabled: true
