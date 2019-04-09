@@ -22,10 +22,4 @@ public class TestController {
         return "HI ZUUL CLIENT A";
     }
 
-    @GetMapping("/mul")
-    public String mul(Integer a, Integer b){
-        System.out.println("进入client-a!");
-        return "client-a-" + a * b;
-    }
-
 }

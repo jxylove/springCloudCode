@@ -2,7 +2,7 @@
 # 服务器相关配置
 ########################
 server:
-  port: 5555
+  port: 6667
 ########################
 # eureka相关配置
 ########################
@@ -19,7 +19,7 @@ eureka:
 ########################
 spring:
   application:
-    name: ZUUL-SERVER
+    name: ZUUL-GROOVY-FILTER-SERVER
   profiles:
     active: tow
 

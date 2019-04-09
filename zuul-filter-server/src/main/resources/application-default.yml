@@ -2,7 +2,7 @@
 # 服务器相关配置
 ########################
 server:
-  port: 5555
+  port: 6555
 ########################
 # eureka相关配置
 ########################
@@ -19,10 +19,14 @@ eureka:
 ########################
 spring:
   application:
-    name: ZUUL-SERVER
+    name: ZUUL-FILTER-SERVER
   profiles:
-    active: tow
-
+    active: one
+zuul:
+  routes:
+    client-a:
+      path: /client/**
+      serviceId: ZUUL-CLIENT-A
 
 
 

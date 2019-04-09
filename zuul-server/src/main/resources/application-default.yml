@@ -21,8 +21,12 @@ spring:
   application:
     name: ZUUL-SERVER
   profiles:
-    active: tow
-
+    active: one
+zuul:
+  routes:
+    client-a:
+      path: /client/**
+      serviceId: ZUUL-CLIENT-A
 
 
 

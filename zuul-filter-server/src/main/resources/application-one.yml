@@ -2,7 +2,7 @@
 # 服务器相关配置
 ########################
 server:
-  port: 5555
+  port: 6556
 ########################
 # eureka相关配置
 ########################
@@ -19,11 +19,15 @@ eureka:
 ########################
 spring:
   application:
-    name: ZUUL-SERVER
-  profiles:
-    active: tow
+    name: ZUUL-FILTER-SERVER
+
+ribbon:
+  eureka:
+    enabled: false
 
 
-
-
-
+ribbon-route:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule     #Ribbon LB Strategy
+    listOfServers: localhost:8901,localhost:8900     #client services for Ribbon LB

@@ -2,7 +2,7 @@
 # 服务器相关配置
 ########################
 server:
-  port: 5555
+  port: 6555
 ########################
 # eureka相关配置
 ########################
@@ -10,7 +10,7 @@ eureka:
   client:
     service-url:
       #eureka 注册中心的地址
-#      defaultZone: http://127.0.0.1:8761/eureka/
+      #      defaultZone: http://127.0.0.1:8761/eureka/
       defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8761}/eureka/
   instance:
     prefer-ip-address: true
@@ -19,11 +19,18 @@ eureka:
 ########################
 spring:
   application:
-    name: ZUUL-SERVER
-  profiles:
-    active: tow
-
-
+    name: ZUUL-FILTER-SERVER
+zuul:
+  routes:
+    client-a:
+      path: /client/a/**
+      serviceId: ZUUL-CLIENT-A
+    client-b:
+      path: /client/b/**
+      serviceId: ZUUL-CLIENT-B
+    client-c:
+      path: /client/c/**
+      serviceId: ZUUL-CLIENT-C
 
 
 
